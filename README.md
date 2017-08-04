@@ -1,0 +1,1 @@
+# script-shell-linux-esempio-2
