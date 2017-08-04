@@ -1,0 +1,64 @@
+esercizio 6.
+
+scrivere uno script di shell che prende il nome di un file o di una directory inserita da un utente e visualizza a schermo se questo è un regolare file o una directory o un altro tipo di file.
+
+
+#!/bin/bash
+
+
+read -p "inserisci il nome del file o directory da analizzare: " FILE
+
+if [ -e $FILE ] then
+ 
+	echo "il file indicato esiste!"
+
+elif [ -f $FILE ] then
+
+	echo "il file è un file regolare!"
+
+elf [ -d $FILE ] then
+
+	echo "il file selezionato è una directory!"
+
+elif [ -x $FILE ] then 
+
+	echo " il file è un file eseguibile "
+
+else 
+
+echo "è qualcosa di diverso da un file regolare o una directory!"
+
+fi
+
+ls -al $FILE
+
+
+esercizio 7.
+
+scrivere uno script di shell che prende il nome di un file o di una directory inserita da riga di comando e visualizza a schermo se questo è un regolare file o una directory o un altro tipo di file.
+
+#!/bin/bash
+
+FILE=$s1
+
+
+if [ -e $FILE ] then
+ 
+	echo "il file indicato esiste!"
+
+elif [ -f $FILE ] then
+
+	echo "il file è un file regolare!"
+
+elif [ -d $FILE ] then
+
+	echo "il file selezionato è una directory!"
+
+elif [ -x $FILE ] then 
+
+	echo " il file è un file eseguibile "
+
+fi
+
+
+ls -al $FILE
